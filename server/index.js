@@ -9,9 +9,7 @@ require('./models/User');
 require('./services/passport');
 
 // Use environment variables to separate dev from production.
-mongoose.connect(process.env.DATABASEURL, {
-    useMongoClient: true
-});
+mongoose.connect(keys.mongoURI);
 
 app.use(
     cookieSession({
