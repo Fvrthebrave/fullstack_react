@@ -15,7 +15,7 @@ module.exports = (app) => {
     
     app.get('/api/current_user', (req, res) => {
         if(req.user) {
-            res.send(req.user);
+            res.send(req.session);
         } else {
             res.send('No current user!');
         }
